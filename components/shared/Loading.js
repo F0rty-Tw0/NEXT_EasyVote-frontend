@@ -1,9 +1,8 @@
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import Image from 'next/image';
-import Modal from 'react-bootstrap/Modal';
 
-const Error = ({ className }) => {
+const Loading = ({ className }) => {
   const router = useRouter();
 
   const [loading, setLoading] = useState(false);
@@ -24,20 +23,16 @@ const Error = ({ className }) => {
   });
 
   return (
-    <Modal
-      className={className}
-      show={loading}
-      aria-labelledby='contained-modal-title-vcenter'
-      centered
-    >
-      <Image
-        className='logo__image'
-        src='/loader.svg'
-        width='200'
-        height='200'
-        alt='Cinemama logo'
-      />
-    </Modal>
+    loading && (
+      <div className={className}>
+        <Image
+          src='/loader.svg'
+          width='200'
+          height='200'
+          alt='Loader image that spins'
+        />
+      </div>
+    )
   );
 };
-export default Error;
+export default Loading;
