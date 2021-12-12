@@ -10,8 +10,11 @@
   &__height {
     height: 100vh;
   }
-  @media screen and (min-width: $screen-sm) {
+  @media screen and (min-width: $screen-s) {
     padding: $spacing-xxxl 0 $spacing-l;
+  }
+  @media screen and (max-width: $screen-xs) {
+    padding: $spacing-l 0 $spacing-m;
   }
 }
 
@@ -26,6 +29,7 @@
 }
 
 .button {
+  cursor: pointer;
   font-size: $font-size-s;
   font-weight: 600;
   color: $color-body;
@@ -33,7 +37,6 @@
   width: 100%;
   height: $spacing-xl;
   &__wrapper {
-    cursor: pointer;
     width: 100%;
     position: relative;
     z-index: 1;
@@ -61,5 +64,9 @@
     top: 0;
     left: -100%;
     transition: all 0.4s;
+  }
+  &:disabled {
+    cursor: default;
+    background: $color-text-muted;
   }
 }

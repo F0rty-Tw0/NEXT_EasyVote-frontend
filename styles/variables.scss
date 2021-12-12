@@ -10,6 +10,7 @@ $color-title: hsl($hue, 12%, 15%);
 $color-text: hsl($hue, 8%, 35%);
 $color-text-muted: hsl($hue, 8%, 65%);
 $color-body: hsl($hue, 100%, 99%);
+$color-danger: hsl(0, 83%, 64%);
 $color-container: #ffffff;
 
 $font-size-xxl: 3.5rem;
@@ -39,7 +40,7 @@ $border-radius-full: 4rem;
 
 $screen-xxs: 320px;
 $screen-xs: 576px;
-$screen-sm: 767px;
+$screen-s: 767px;
 $screen-m: 968px;
 $screen-l: 1024px;
 

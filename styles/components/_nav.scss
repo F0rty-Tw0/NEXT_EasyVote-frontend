@@ -5,7 +5,7 @@
   align-items: center;
   &__img {
     border-radius: 50%;
-    @media screen and (min-width: $screen-sm) {
+    @media screen and (min-width: $screen-s) {
       display: none;
     }
   }
@@ -32,7 +32,7 @@
     font-weight: 600;
     transition: color 0.2s ease;
     &:hover {
-      @media screen and (min-width: $screen-sm) {
+      @media screen and (min-width: $screen-s) {
         color: $color-primary;
       }
     }
@@ -42,19 +42,19 @@
     @media screen and (max-width: $screen-xxs) {
       display: none;
     }
-    @media screen and (min-width: $screen-sm) {
+    @media screen and (min-width: $screen-s) {
       font-size: $font-size-s;
     }
   }
   &__icon {
     font-size: $font-size-l;
-    @media screen and (min-width: $screen-sm) {
+    @media screen and (min-width: $screen-s) {
       display: none;
     }
   }
 
   &__menu {
-    @media screen and (max-width: $screen-sm) {
+    @media screen and (max-width: $screen-s) {
       position: fixed;
       bottom: 0;
       left: 0;
@@ -70,7 +70,7 @@
       transition: all 0.4s ease-in-out;
     }
   }
-  @media screen and (min-width: $screen-sm) {
+  @media screen and (min-width: $screen-s) {
     height: calc($spacing-xl + $spacing-m);
   }
 }
@@ -90,7 +90,7 @@
       border-radius: $border-radius-full;
     }
 
-    @media screen and (min-width: $screen-sm) {
+    @media screen and (min-width: $screen-s) {
       content: '';
       position: absolute;
       bottom: -0.75rem;
