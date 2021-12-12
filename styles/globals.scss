@@ -2,6 +2,7 @@
 @import './components/_shared';
 @import './components/_base-layout';
 @import './components/_header';
+@import './components/_login';
 @import './components/_nav';
 
 * {
@@ -33,4 +34,15 @@ a {
 img {
   max-width: 100%;
   height: auto;
+}
+
+input {
+  outline: none;
+  border: none;
+}
+
+button {
+  outline: none;
+  border: none;
+  background-color: transparent;
 }

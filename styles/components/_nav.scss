@@ -79,7 +79,7 @@
   position: relative;
   color: $color-primary;
   transition: 0.3s ease-in-out;
-  &:before {
+  &::before {
     @media screen and (max-width: $screen-xxs) {
       content: '';
       position: absolute;
@@ -87,7 +87,7 @@
       width: 4px;
       height: 4px;
       background-color: $color-primary;
-      border-radius: 50%;
+      border-radius: $border-radius-full;
     }
 
     @media screen and (min-width: $screen-sm) {
@@ -97,7 +97,7 @@
       width: 4px;
       height: 4px;
       background-color: $color-primary;
-      border-radius: 50%;
+      border-radius: $border-radius-full;
     }
   }
 }

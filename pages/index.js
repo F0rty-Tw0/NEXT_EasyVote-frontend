@@ -1,5 +1,5 @@
 import BaseLayout from 'layouts/BaseLayout';
-
+import Login from 'components/Login';
 const Home = () => {
   return (
     <BaseLayout
@@ -8,6 +8,7 @@ const Home = () => {
       className='base-layout__home'
     >
       <h2 className='section__title'>Home</h2>
+      <Login />
     </BaseLayout>
   );
 };
