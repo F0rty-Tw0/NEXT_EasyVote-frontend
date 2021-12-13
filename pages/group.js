@@ -31,7 +31,7 @@ const Group = () => {
                 <span className='people__name'>Artiom Tofan</span>
                 <span className='people__email'>art@gmail.com</span>
               </div>
-              <div className='people__status' />
+              <div className='people__status online' />
             </div>
             <div className='people'>
               <div className='people__avatar'>N</div>
@@ -39,7 +39,7 @@ const Group = () => {
                 <span className='people__name'>Nikolai Lenander</span>
                 <span className='people__email'>niko@gmail.com</span>
               </div>
-              <div className='people__status' />
+              <div className='people__status offline' />
             </div>
             <div className='people'>
               <div className='people__avatar'>P</div>

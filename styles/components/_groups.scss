@@ -54,7 +54,7 @@
     width: $spacing-xs;
     border-radius: $border-radius-full;
     margin-top: $spacing-s;
-    background-color: $color-danger;
+    background-color: $color-text-muted;
   }
   &__avatar {
     height: $spacing-l;
@@ -94,4 +94,11 @@
     margin: $spacing-s 0 0 $spacing-s;
     font-size: $font-size-m;
   }
+}
+
+.online {
+  background-color: $color-primary;
+}
+.offline {
+  background-color: $color-danger;
 }
