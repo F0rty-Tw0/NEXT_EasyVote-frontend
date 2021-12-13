@@ -9,13 +9,16 @@ $color-primary-alt: hsl($hue-alt, 98%, 56%);
 $color-title: hsl($hue, 12%, 15%);
 $color-text: hsl($hue, 8%, 35%);
 $color-text-muted: hsl($hue, 8%, 65%);
+$color-text-gray: hsl(213, 42%, 94%);
 $color-body: hsl($hue, 100%, 99%);
 $color-danger: hsl(0, 83%, 64%);
 $color-container: #ffffff;
 
+$font-size-xxxl: 5rem;
 $font-size-xxl: 3.5rem;
 $font-size-xl: 2rem;
 $font-size-l: 1.5rem;
+$font-size-m: 1.25rem;
 $font-size-s: 0.935rem;
 $font-size-xs: 0.8rem;
 $font-size-xxs: 0.625rem;
@@ -31,7 +34,8 @@ $spacing-xxs: 0.25rem;
 $shadow-up: 0 -1px 12px hsla($hue, $sat, 15%, 0.15);
 $shadow-down: 0 1px 12px hsla($hue, $sat, 15%, 0.15);
 $shadow-around: 0 5px 10px hsla($hue, $sat, 15%, 0.15);
-
+$shadow-icon: 0 13px 26px hsla($hue, $sat, 15%, 0.15),
+  0 3px 6px hsla($hue, $sat, 15%, 0.15);
 $z-tooltip: 10;
 $z-fixed: 100;
 

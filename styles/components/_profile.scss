@@ -1,0 +1,111 @@
+.profile {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  &:after {
+    content: ' ';
+    width: 100%;
+    height: 1px;
+    display: block;
+    margin-top: $spacing-m;
+    background: $color-text-gray;
+  }
+  &__top-icons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: $spacing-s;
+  }
+  &__thumbnail {
+    width: $spacing-xxxl;
+    height: $spacing-xxxl;
+    color: $color-container;
+    border-radius: $border-radius-full;
+    text-align: center;
+    font-size: $font-size-xxxl;
+    background-color: $color-text;
+    box-shadow: $shadow-icon;
+  }
+  &__slogan {
+    text-align: center;
+    font-size: $font-size-xs;
+    margin-top: $spacing-m;
+    @media screen and (min-width: $screen-s) {
+      width: 70%;
+    }
+  }
+  &__address {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    @media screen and (min-width: $screen-s) {
+      flex-direction: row;
+      width: 70%;
+    }
+  }
+  &__name {
+    font-size: $font-size-m;
+    font-weight: 600;
+    margin-top: $spacing-m;
+  }
+  &__title {
+    font-size: $font-size-xs;
+    color: $color-text;
+  }
+  &__email {
+    font-size: $font-size-s;
+    letter-spacing: 1.5px;
+    color: $color-text;
+    margin-bottom: $spacing-s;
+  }
+  &__icons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    margin-top: $spacing-s;
+    margin-bottom: $spacing-s;
+  }
+  &__check {
+    position: relative;
+    svg {
+      position: absolute;
+      bottom: $spacing-xxs;
+      left: $spacing-l;
+      color: $color-container;
+      width: $spacing-m;
+      height: $spacing-m;
+      border-radius: $border-radius-full;
+      background: $color-primary-alt;
+    }
+  }
+}
+
+.icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: $spacing-xxl;
+  height: $spacing-xxl;
+  margin-bottom: $spacing-s;
+  margin-top: $spacing-m;
+  opacity: 0.8;
+  border-radius: $border-radius-full;
+  font-size: $font-size-xl;
+  font-weight: 600;
+  background: $color-primary-alt;
+  color: $color-text;
+  box-shadow: $shadow-icon;
+
+  &__title {
+    font-size: $font-size-xs;
+    color: $color-text;
+  }
+  &__container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+}

@@ -8,7 +8,7 @@ const Home = () => {
       description='Voting was never that easy before. With Easy Vote you can vote remotely without getting out your comfort zone.'
       className='base-layout__home'
     >
-      <Register />
+      <Login />
     </BaseLayout>
   );
 };

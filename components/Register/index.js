@@ -1,4 +1,4 @@
-import { BiLogIn } from 'react-icons/bi';
+import Image from 'next/image';
 import RegisterForm from './RegisterForm';
 
 const Register = () => {
@@ -6,10 +6,8 @@ const Register = () => {
     <div className='form__container'>
       <div className='form__wrapper'>
         <span className='form__title'>Register</span>
-        <div className='form__icon'>
-          <BiLogIn />
-        </div>
-          <RegisterForm />
+        <Image width='48' height='48' src='/favicon.ico' alt='Easy Vote logo' />
+        <RegisterForm />
       </div>
     </div>
   );

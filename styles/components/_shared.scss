@@ -28,6 +28,21 @@
   }
 }
 
+.page {
+  display: flex;
+  justify-content: center;
+  &__wrapper {
+    background: $color-container;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: $spacing-xxl $spacing-xl $spacing-l;
+    box-shadow: $shadow-around;
+    @media screen and (max-width: $screen-xs) {
+      padding: $spacing-xl $spacing-s $spacing-l;
+    }
+  }
+}
+
 .button {
   cursor: pointer;
   font-size: $font-size-s;

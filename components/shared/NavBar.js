@@ -32,18 +32,18 @@ const NavBar = () => {
             </Link>
           </li>
           <li className='nav__item'>
-            <Link passHref href={`/about`}>
-              <a className={`nav__link ${getActiveLink('/about')}`}>
+            <Link passHref href={`/profile`}>
+              <a className={`nav__link ${getActiveLink('/profile')}`}>
                 <BiUser className='nav__icon' />
-                <span className='nav__name'>About</span>
+                <span className='nav__name'>Profile</span>
               </a>
             </Link>
           </li>
           <li className='nav__item'>
-            <Link passHref href={`/groups`}>
-              <a className={`nav__link ${getActiveLink('/groups')}`}>
+            <Link passHref href={`/group`}>
+              <a className={`nav__link ${getActiveLink('/group')}`}>
                 <BiBookAlt className='nav__icon' />
-                <span className='nav__name'>Groups</span>
+                <span className='nav__name'>Group</span>
               </a>
             </Link>
           </li>
@@ -56,10 +56,10 @@ const NavBar = () => {
             </Link>
           </li>
           <li className='nav__item'>
-            <Link passHref href={`/messages`}>
-              <a className={`nav__link ${getActiveLink('/messages')}`}>
+            <Link passHref href={`/posts`}>
+              <a className={`nav__link ${getActiveLink('/posts')}`}>
                 <BiMessageSquareDetail className='nav__icon' />
-                <span className='nav__name'>Messages</span>
+                <span className='nav__name'>My Posts</span>
               </a>
             </Link>
           </li>

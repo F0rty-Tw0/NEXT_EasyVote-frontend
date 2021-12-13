@@ -39,7 +39,7 @@ const LoginForm = () => {
         <button className='button'>Login</button>
         <div className='button__background'></div>
       </div>
-      <div className='login__footer'>
+      <div className='form__footer'>
         <span>This connection is encrypted</span>
       </div>
     </form>
