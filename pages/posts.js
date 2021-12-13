@@ -11,6 +11,7 @@ const Posts = () => {
       <div className='page'>
         <div className='page__wrapper'>
           <section className='posts__section'>
+            <h2 className='section__title'>My posts</h2>
             <div className='group__header'>
               <div className='group__title'>Today</div>
               <div className='group__date'>Monday, Dec 13, 2021</div>

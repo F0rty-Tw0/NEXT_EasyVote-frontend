@@ -10,6 +10,7 @@ $color-title: hsl($hue, 12%, 15%);
 $color-text: hsl($hue, 8%, 35%);
 $color-text-muted: hsl($hue, 8%, 65%);
 $color-text-gray: hsl(213, 42%, 94%);
+$color-text-gray-alt: hsl(214, 25%, 87%);
 $color-body: hsl($hue, 100%, 99%);
 $color-danger: hsl(0, 83%, 64%);
 $color-container: #ffffff;
@@ -37,6 +38,7 @@ $shadow-down: 0 1px 12px hsla($hue, $sat, 15%, 0.15);
 $shadow-around: 0 5px 10px hsla($hue, $sat, 15%, 0.15);
 $shadow-icon: 0 13px 26px hsla($hue, $sat, 15%, 0.15),
   0 3px 6px hsla($hue, $sat, 15%, 0.15);
+$shadow-hover: 0 9px 37px 11px hsla($hue, $sat, 15%, 0.15);
 
 $z-tooltip: 10;
 $z-fixed: 100;

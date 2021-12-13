@@ -19,9 +19,8 @@ const Profile = () => {
         <div className='page__wrapper'>
           <div className='profile__top-icons'>
             <BiArrowBack />
-            <div>
-              <BiDotsVerticalRounded />
-            </div>
+            <h2 className='section__title'>Profile</h2>
+            <BiDotsVerticalRounded />
           </div>
 
           <div className='profile'>
