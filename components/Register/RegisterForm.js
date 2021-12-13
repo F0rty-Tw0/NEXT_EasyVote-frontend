@@ -82,7 +82,7 @@ const RegisterForm = () => {
             <input
               {...register('phone')}
               className={`input ${watch('phone') ? 'input--filled' : ''}`}
-              type='number'
+              type='telephone'
             />
             {errors['phone'] && <span className='input__error'>mandatory</span>}
             <span className='input--focus' placeholder='Phone'></span>

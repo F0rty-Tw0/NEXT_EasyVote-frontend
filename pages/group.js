@@ -1,6 +1,9 @@
+import { useState } from 'react';
 import BaseLayout from 'layouts/BaseLayout';
 import { FaUsers, FaRegComments, FaHistory, FaSearch } from 'react-icons/fa';
 const Group = () => {
+  const [search, setSearch] = useState('');
+
   return (
     <BaseLayout
       title='Welcome to Easy Vote'
@@ -50,13 +53,23 @@ const Group = () => {
               <div className='people__status' />
             </div>
 
-            <div className='groups__search'>
-              <FaSearch className='search__icon' />
-              <input
-                className='search__input'
-                type='text'
-                placeholder='Search people...'
+            <div className='groups__search input__wrapper'>
+              <FaSearch
+                className='search__icon'
+                onClick={() => console.log(search)}
               />
+              <input
+                className={`input search__input ${
+                  search.length > 0 ? 'input--filled' : ''
+                }`}
+                type='text'
+                name='search'
+                onChange={(event) => setSearch(event.target.value)}
+              />
+              <span
+                className='input--focus'
+                placeholder='Search people...'
+              ></span>
             </div>
           </section>
         </div>

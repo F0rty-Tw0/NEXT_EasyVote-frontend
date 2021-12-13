@@ -9,8 +9,9 @@
   }
   &__search {
     display: flex;
-    background: $color-text-gray;
+    align-items: center;
     height: $spacing-xl;
+    margin-top: $spacing-s;
   }
 }
 
@@ -48,6 +49,9 @@
   justify-content: space-between;
   height: $spacing-xxl;
   border-bottom: 1px solid $color-text-gray;
+  &:last-child {
+    border-bottom: none;
+  }
   &__status {
     margin-left: auto;
     height: $spacing-xs;
@@ -90,9 +94,15 @@
     width: 80%;
   }
   &__icon {
+    cursor: pointer;
+    margin-left: auto;
+    order: 2;
     color: $color-text-muted;
-    margin: $spacing-s 0 0 $spacing-s;
     font-size: $font-size-m;
+    transition: color 0.4s ease;
+    &:hover {
+      color: $color-primary;
+    }
   }
 }
 
