@@ -29,7 +29,7 @@ const Group = () => {
               <div className='people__avatar'>A</div>
               <div className='people__info'>
                 <span className='people__name'>Artiom Tofan</span>
-                <span className='people__email'>mirobadev@gmail.com</span>
+                <span className='people__email'>art@gmail.com</span>
               </div>
               <div className='people__status' />
             </div>
@@ -37,7 +37,7 @@ const Group = () => {
               <div className='people__avatar'>N</div>
               <div className='people__info'>
                 <span className='people__name'>Nikolai Lenander</span>
-                <span className='people__email'>mirobadev@gmail.com</span>
+                <span className='people__email'>niko@gmail.com</span>
               </div>
               <div className='people__status' />
             </div>
@@ -45,7 +45,7 @@ const Group = () => {
               <div className='people__avatar'>P</div>
               <div className='people__info'>
                 <span className='people__name'>Pawel Stepien</span>
-                <span className='people__email'>mirobadev@gmail.com</span>
+                <span className='people__email'>pawel@gmail.com</span>
               </div>
               <div className='people__status' />
             </div>
