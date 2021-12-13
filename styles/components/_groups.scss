@@ -1,0 +1,97 @@
+.groups {
+  &__menu {
+    display: grid;
+    padding: 0 $spacing-xxxl;
+    grid-template-columns: auto auto auto;
+    justify-content: space-evenly;
+    color: $color-text-muted;
+    border-bottom: 1px solid $color-text-gray;
+  }
+  &__search {
+    display: flex;
+    background: $color-text-gray;
+    height: $spacing-xl;
+  }
+}
+
+.menu {
+  &__icon {
+    width: $spacing-l;
+    height: $spacing-l;
+  }
+  &__button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: $spacing-s;
+    padding: $spacing-s $spacing-m;
+    &::before {
+      display: none;
+      @media screen and (max-width: $screen-xs) {
+        display: block;
+      }
+    }
+  }
+  &__name {
+    font-size: $font-size-xs;
+    @media screen and (max-width: $screen-xxs) {
+      display: none;
+    }
+  }
+}
+
+.people {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-content: center;
+  justify-content: space-between;
+  height: $spacing-xxl;
+  border-bottom: 1px solid $color-text-gray;
+  &__status {
+    margin-left: auto;
+    height: $spacing-xs;
+    width: $spacing-xs;
+    border-radius: $border-radius-full;
+    margin-top: $spacing-s;
+    background-color: $color-danger;
+  }
+  &__avatar {
+    height: $spacing-l;
+    width: $spacing-l;
+    margin-top: $spacing-xs;
+    margin-right: $spacing-s;
+    text-align: center;
+    font-size: $font-size-m;
+    font-weight: bold;
+    border-radius: $border-radius-full;
+    color: $color-container;
+    background-color: $color-primary-alt;
+  }
+  &__info {
+    display: flex;
+    flex-direction: column;
+    color: $color-text;
+  }
+  &__name {
+    font-size: $font-size-m;
+    font-weight: bold;
+  }
+  &__email {
+    font-size: $font-size-xs;
+  }
+}
+
+.search {
+  &__input {
+    padding: $spacing-xs $spacing-s;
+    font-size: $font-size-s;
+    background: $color-text-gray;
+    width: 80%;
+  }
+  &__icon {
+    color: $color-text-muted;
+    margin: $spacing-s 0 0 $spacing-s;
+    font-size: $font-size-m;
+  }
+}

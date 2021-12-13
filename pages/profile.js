@@ -4,7 +4,6 @@ import {
   BiCalendar,
   BiBriefcaseAlt,
   BiDotsVerticalRounded,
-  BiHeart,
   BiCheck,
   BiFile,
 } from 'react-icons/bi';
@@ -21,7 +20,6 @@ const Profile = () => {
           <div className='profile__top-icons'>
             <BiArrowBack />
             <div>
-              <BiHeart />
               <BiDotsVerticalRounded />
             </div>
           </div>
