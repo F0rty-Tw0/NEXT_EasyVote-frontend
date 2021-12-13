@@ -29,6 +29,7 @@ $spacing-xl: 3rem;
 $spacing-l: 2rem;
 $spacing-m: 1.5rem;
 $spacing-s: 1rem;
+$spacing-xs: 0.5rem;
 $spacing-xxs: 0.25rem;
 
 $shadow-up: 0 -1px 12px hsla($hue, $sat, 15%, 0.15);
@@ -36,6 +37,7 @@ $shadow-down: 0 1px 12px hsla($hue, $sat, 15%, 0.15);
 $shadow-around: 0 5px 10px hsla($hue, $sat, 15%, 0.15);
 $shadow-icon: 0 13px 26px hsla($hue, $sat, 15%, 0.15),
   0 3px 6px hsla($hue, $sat, 15%, 0.15);
+
 $z-tooltip: 10;
 $z-fixed: 100;
 
