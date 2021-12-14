@@ -3,9 +3,8 @@ import { useRouter } from 'next/router';
 import { useDispatch } from 'react-redux';
 import { useForm } from 'react-hook-form';
 import { setLoggedUser } from 'redux/actions';
-import { getLoggedUser } from 'endpoints/users';
+import { getLoggedUser, createUser } from 'endpoints/users';
 import FormNavigation from './FormNavigation';
-import { createUser } from 'endpoints/users';
 
 const RegisterForm = () => {
   const router = useRouter();
