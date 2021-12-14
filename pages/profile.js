@@ -45,7 +45,7 @@ const Profile = () => {
               <p className='profile__email'>{loggedUser?.email}</p>
               <div className='profile__address'>
                 <span className='profile__address--municipality'>
-                  {loggedUser?.municipality.name}
+                  {loggedUser?.municipality?.name}
                 </span>
 
                 <button className='profile__zip'>{loggedUser?.zip}</button>
