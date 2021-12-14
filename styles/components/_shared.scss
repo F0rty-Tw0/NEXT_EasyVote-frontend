@@ -54,6 +54,7 @@
   height: $spacing-xl;
 
   &__wrapper {
+    cursor: pointer;
     width: 100%;
     position: relative;
     z-index: 1;

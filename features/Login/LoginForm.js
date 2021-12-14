@@ -55,7 +55,9 @@ const LoginForm = ({ authenticate }) => {
       </div>
 
       <div className='button__wrapper'>
-        <button className='button'>Login</button>
+        <button type='submit' className='button'>
+          Login
+        </button>
         <div className='button__background'></div>
       </div>
       <div className='form__footer'>
