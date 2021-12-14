@@ -60,7 +60,7 @@ const Profile = () => {
                 <div className='icon'>
                   <BiBriefcaseAlt />
                 </div>
-                <h4>{loggedUser?.party.abbreviation}</h4>
+                <h4>{loggedUser?.party?.abbreviation}</h4>
                 <p className='icon__title'>PARTY</p>
               </div>
               <div>

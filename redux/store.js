@@ -17,11 +17,12 @@ const reducer = (state, action) => {
       ...state,
       ...action.payload,
     };
-    if (state.user.user?.id)
-      // preserve the user state on client side navigation
-      nextState.user.user = state.user.user;
+    // preserve the user state on client side navigation
+    if (state.user.user?.id) nextState.user.user = state.user.user;
     if (state.loggedUser.loggedUser?.id)
       nextState.loggedUser.loggedUser = state.loggedUser.loggedUser;
+    if (state.parties.parties.length > 0)
+      nextState.parties.parties = state.parties.parties;
     return nextState;
   } else {
     return allReducers(state, action);

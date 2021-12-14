@@ -28,12 +28,10 @@
     box-shadow: $shadow-icon;
   }
   &__slogan {
-    margin: $spacing-s $spacing-m 0 $spacing-m;
     text-align: center;
     font-size: $font-size-xs;
     margin-top: $spacing-m;
     @media screen and (min-width: $screen-s) {
-      margin: $spacing-s $spacing-xxxl 0 $spacing-xxxl;
       width: 70%;
     }
   }
@@ -49,9 +47,13 @@
     }
   }
   &__name {
+    margin: $spacing-s $spacing-m 0 $spacing-m;
     font-size: $font-size-m;
     font-weight: 600;
     margin-top: $spacing-m;
+    @media screen and (min-width: $screen-s) {
+      margin: $spacing-s $spacing-xxxl 0 $spacing-xxxl;
+    }
   }
   &__title {
     font-size: $font-size-xs;

@@ -11,10 +11,10 @@ import {
   BiUser,
 } from 'react-icons/bi';
 import { setLoggedUser } from 'redux/actions';
+import { getLoggedUser } from 'endpoints/users';
 import ThemeChanger from '../ThemeChanger';
 import reAuthenticateUser from 'features/Login/reAuthenticateUser';
 import getAuthenticatedUser from 'features/Login/getAuthenticatedUser';
-import { getLoggedUser } from 'endpoints/users';
 
 const NavBar = () => {
   const router = useRouter();

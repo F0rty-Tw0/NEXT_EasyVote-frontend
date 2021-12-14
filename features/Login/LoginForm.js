@@ -19,7 +19,6 @@ const LoginForm = ({ authenticate }) => {
       if (isLogged) {
         const fetchedUser = await getLoggedUser();
         dispatch(setLoggedUser(fetchedUser));
-        console.log('logged');
       }
     },
     [formData, authenticate, dispatch]
