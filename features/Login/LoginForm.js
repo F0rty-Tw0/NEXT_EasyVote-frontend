@@ -1,8 +1,12 @@
-import { connect } from 'react-redux';
+import { connect, useDispatch } from 'react-redux';
 import { useState, useCallback } from 'react';
+import { setLoggedUser } from 'redux/actions';
+import { getLoggedUser } from 'endpoints/users';
 import authenticateUser from './authenticateUser';
 
 const LoginForm = ({ authenticate }) => {
+  const dispatch = useDispatch();
+
   const [formData, setFormData] = useState({
     username: '',
     password: '',
@@ -13,10 +17,12 @@ const LoginForm = ({ authenticate }) => {
       event.preventDefault();
       const isLogged = await authenticate(formData);
       if (isLogged) {
+        const fetchedUser = await getLoggedUser();
+        dispatch(setLoggedUser(fetchedUser));
         console.log('logged');
       }
     },
-    [formData, authenticate]
+    [formData, authenticate, dispatch]
   );
 
   return (

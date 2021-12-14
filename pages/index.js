@@ -17,7 +17,7 @@ const Home = () => {
     >
       {!user && <Login />}
       {user && !loggedUser && <Register />}
-      {user && loggedUser && <Redirect ssr to='/profile' />}
+      {user && loggedUser && <Redirect to='/profile' />}
     </BaseLayout>
   );
 };

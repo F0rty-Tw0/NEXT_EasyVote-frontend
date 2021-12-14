@@ -23,7 +23,7 @@ const NavBar = () => {
 
   useEffect(() => {
     if (!loggedUser) {
-      const fetchData = async () => {
+      const fetchLoggedUser = async () => {
         try {
           const fetchedUser = await getLoggedUser();
           dispatch(setLoggedUser(fetchedUser));
@@ -31,7 +31,7 @@ const NavBar = () => {
           console.log(error);
         }
       };
-      fetchData();
+      fetchLoggedUser();
     }
   }, [loggedUser, dispatch]);
 
