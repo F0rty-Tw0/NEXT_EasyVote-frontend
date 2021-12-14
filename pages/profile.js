@@ -35,7 +35,7 @@ const Profile = () => {
 
             <div className='profile'>
               <div className='profile__thumbnail'>
-                {loggedUser?.name.charAt(0)}
+                {loggedUser?.name?.charAt(0)}
               </div>
               <div className='profile__check'>
                 <BiCheck />
