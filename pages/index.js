@@ -1,14 +1,23 @@
+import { useSelector } from 'react-redux';
+
 import BaseLayout from 'layouts/BaseLayout';
-import Login from '@/Login';
-import Register from '@/Register';
+
+import Login from 'features/Login';
+import Register from 'features/Register';
+import Redirect from 'utils/redirect';
 const Home = () => {
+  const { user } = useSelector((state) => state.user);
+  const { loggedUser } = useSelector((state) => state.loggedUser);
+
   return (
     <BaseLayout
       title='Welcome to Easy Vote'
       description='Voting was never that easy before. With Easy Vote you can vote remotely without getting out your comfort zone.'
       className='base-layout__home'
     >
-      <Login />
+      {!user && <Login />}
+      {user && !loggedUser && <Register />}
+      {user && loggedUser && <Redirect ssr to='/profile' />}
     </BaseLayout>
   );
 };

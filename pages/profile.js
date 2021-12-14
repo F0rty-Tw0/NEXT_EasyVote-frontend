@@ -1,3 +1,4 @@
+import { useDispatch, useSelector } from 'react-redux';
 import BaseLayout from 'layouts/BaseLayout';
 import {
   BiArrowBack,
@@ -7,8 +8,14 @@ import {
   BiCheck,
   BiFile,
 } from 'react-icons/bi';
+import deAuthenticateUser from 'features/Login/deAuthenticateUser';
 
 const Profile = () => {
+  const dispatch = useDispatch();
+  const { loggedUser } = useSelector((state) => state.loggedUser);
+  const logout = () => {
+    dispatch(deAuthenticateUser());
+  };
   return (
     <BaseLayout
       title='Welcome to Easy Vote'
@@ -20,7 +27,7 @@ const Profile = () => {
           <div className='profile__top-icons'>
             <BiArrowBack />
             <h2 className='section__title'>Profile</h2>
-            <BiDotsVerticalRounded />
+            <BiDotsVerticalRounded onClick={logout} />
           </div>
 
           <div className='profile'>

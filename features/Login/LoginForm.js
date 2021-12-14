@@ -1,22 +1,35 @@
-import { useState } from 'react';
+import { connect } from 'react-redux';
+import { useState, useCallback } from 'react';
+import authenticateUser from './authenticateUser';
 
-const LoginForm = () => {
+const LoginForm = ({ authenticate }) => {
   const [formData, setFormData] = useState({
-    nemId: '',
+    username: '',
     password: '',
   });
-  
+
+  const login = useCallback(
+    async (event) => {
+      event.preventDefault();
+      const isLogged = await authenticate(formData);
+      if (isLogged) {
+        console.log('logged');
+      }
+    },
+    [formData, authenticate]
+  );
+
   return (
-    <form>
+    <form onSubmit={login}>
       <div className='input__wrapper'>
         <input
           className={`input ${
-            formData.nemId.length > 0 ? 'input--filled' : ''
+            formData.username.length > 0 ? 'input--filled' : ''
           }`}
           type='text'
-          name='nemId'
+          name='username'
           onChange={(event) =>
-            setFormData({ ...formData, nemId: event.target.value })
+            setFormData({ ...formData, username: event.target.value })
           }
         />
         <span className='input--focus' placeholder='NemId'></span>
@@ -47,4 +60,6 @@ const LoginForm = () => {
   );
 };
 
-export default LoginForm;
+export default connect((state) => state, { authenticate: authenticateUser })(
+  LoginForm
+);

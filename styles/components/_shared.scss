@@ -95,8 +95,7 @@
   width: 60px;
   border-radius: 15px;
   overflow: hidden;
-  box-shadow: -8px -4px 8px 0px #ffffff, 8px 4px 12px 0px #d1d9e6,
-    4px 4px 4px 0px #d1d9e6 inset, -4px -4px 4px 0px #ffffff inset;
+  box-shadow: 8px 4px 12px 0px #d1d9e6, 4px 4px 4px 0px #d1d9e6 inset;
 }
 
 .toggle-state {
@@ -104,6 +103,7 @@
 }
 
 .indicator {
+  cursor: pointer;
   height: 100%;
   width: 200%;
   background: #ecf0f3;

@@ -6,7 +6,14 @@ const Register = () => {
     <div className='form__container'>
       <div className='form__wrapper'>
         <span className='form__title'>Register</span>
-        <Image width='48' height='48' src='/favicon.ico' alt='Easy Vote logo' />
+        <div className='form__icon'>
+          <Image
+            width='48'
+            height='48'
+            src='/favicon.ico'
+            alt='Easy Vote logo'
+          />
+        </div>
         <RegisterForm />
       </div>
     </div>

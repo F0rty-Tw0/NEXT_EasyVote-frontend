@@ -1,6 +1,8 @@
-import Link from 'next/link';
-import Image from 'next/image';
+import { useDispatch, useSelector } from 'react-redux';
 import { useRouter } from 'next/router';
+import { useEffect } from 'react';
+import Image from 'next/image';
+import Link from 'next/link';
 import {
   BiHomeAlt,
   BiBookAlt,
@@ -8,11 +10,37 @@ import {
   BiMessageSquareDetail,
   BiUser,
 } from 'react-icons/bi';
-
+import { setLoggedUser } from 'redux/actions';
 import ThemeChanger from '../ThemeChanger';
+import reAuthenticateUser from 'features/Login/reAuthenticateUser';
+import getAuthenticatedUser from 'features/Login/getAuthenticatedUser';
+import { getLoggedUser } from 'endpoints/users';
 
 const NavBar = () => {
   const router = useRouter();
+  const dispatch = useDispatch();
+  const { loggedUser } = useSelector((state) => state.loggedUser);
+
+  useEffect(() => {
+    if (!loggedUser) {
+      const fetchData = async () => {
+        try {
+          const fetchedUser = await getLoggedUser();
+          dispatch(setLoggedUser(fetchedUser));
+        } catch (error) {
+          console.log(error);
+        }
+      };
+      fetchData();
+    }
+  }, [loggedUser, dispatch]);
+
+  useEffect(() => {
+    const authenticatedUser = getAuthenticatedUser();
+    if (authenticatedUser) {
+      dispatch(reAuthenticateUser(authenticatedUser));
+    }
+  }, [dispatch]);
 
   const getActiveLink = (path) => {
     return router.asPath == path ? 'active' : '';
@@ -27,15 +55,17 @@ const NavBar = () => {
 
       <div className='nav__menu' id='nav-menu'>
         <ul className='nav__list'>
-          <li className='nav__item'>
-            <Link passHref href={`/`}>
-              <a className={`nav__link ${getActiveLink('/')}`}>
-                <BiHomeAlt className='nav__icon' />
-                <span className='nav__name'>Home</span>
-              </a>
-            </Link>
-          </li>
-          <li className='nav__item'>
+          {!loggedUser && (
+            <li className='nav__item'>
+              <Link passHref href={`/`}>
+                <a className={`nav__link ${getActiveLink('/')}`}>
+                  <BiHomeAlt className='nav__icon' />
+                  <span className='nav__name'>Home</span>
+                </a>
+              </Link>
+            </li>
+          )}
+          <li className={`nav__item ${!loggedUser ? 'disabled' : ''}`}>
             <Link passHref href={`/profile`}>
               <a className={`nav__link ${getActiveLink('/profile')}`}>
                 <BiUser className='nav__icon' />
@@ -43,7 +73,7 @@ const NavBar = () => {
               </a>
             </Link>
           </li>
-          <li className='nav__item'>
+          <li className={`nav__item ${!loggedUser ? 'disabled' : ''}`}>
             <Link passHref href={`/group`}>
               <a className={`nav__link ${getActiveLink('/group')}`}>
                 <BiBookAlt className='nav__icon' />
@@ -51,7 +81,7 @@ const NavBar = () => {
               </a>
             </Link>
           </li>
-          <li className='nav__item'>
+          <li className={`nav__item ${!loggedUser ? 'disabled' : ''}`}>
             <Link passHref href={`/parties`}>
               <a className={`nav__link ${getActiveLink('/parties')}`}>
                 <BiBriefcaseAlt className='nav__icon' />
@@ -59,7 +89,7 @@ const NavBar = () => {
               </a>
             </Link>
           </li>
-          <li className='nav__item'>
+          <li className={`nav__item ${!loggedUser ? 'disabled' : ''}`}>
             <Link passHref href={`/posts`}>
               <a className={`nav__link ${getActiveLink('/posts')}`}>
                 <BiMessageSquareDetail className='nav__icon' />

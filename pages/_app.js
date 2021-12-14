@@ -1,12 +1,13 @@
 import '../styles/globals.scss';
 import { ThemeProvider } from 'next-themes';
+import wrapper from 'redux/store';
 
-function MyApp({ Component, pageProps }) {
+const MyApp = ({ Component, pageProps }) => {
   return (
     <ThemeProvider>
       <Component {...pageProps} />
     </ThemeProvider>
   );
-}
+};
 
-export default MyApp;
+export default wrapper.withRedux(MyApp);

@@ -6,14 +6,11 @@
     background: $theme-dark-bg-800;
   }
   .toggle {
-    box-shadow: -8px -4px 8px 0px $theme-dark-bg-800,
-      8px 4px 12px 0px $theme-dark-bg-900,
-      4px 4px 15px 0px $theme-dark-bg-500 inset,
-      -4px -4px 15px 0px $theme-dark-bg-500 inset;
+    box-shadow: 8px 4px 12px 0px $theme-dark-bg-900;
   }
   .indicator {
     background: $theme-dark-bg-300;
-    box-shadow: -8px -4px 8px 0px $theme-dark-bg-400,
+    box-shadow: -8px -4px 8px 0px $theme-dark-bg-500,
       8px 4px 12px 0px $theme-dark-bg-500;
   }
   .icon {
@@ -126,5 +123,12 @@
     &__header .post__icon {
       color: $theme-dark-bg-800;
     }
+  }
+
+  input[type='date']:in-range::-webkit-datetime-edit-year-field,
+  input[type='date']:in-range::-webkit-datetime-edit-month-field,
+  input[type='date']:in-range::-webkit-datetime-edit-day-field,
+  input[type='date']:in-range::-webkit-datetime-edit-text {
+    color: transparent;
   }
 }
