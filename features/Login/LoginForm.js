@@ -25,7 +25,7 @@ const LoginForm = ({ authenticate }) => {
   );
 
   return (
-    <form onSubmit={login}>
+    <form>
       <div className='input__wrapper'>
         <input
           className={`input ${
@@ -55,7 +55,7 @@ const LoginForm = ({ authenticate }) => {
       </div>
 
       <div className='button__wrapper'>
-        <button type='submit' className='button'>
+        <button type='submit' className='button' onClick={login}>
           Login
         </button>
         <div className='button__background'></div>
