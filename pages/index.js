@@ -16,7 +16,7 @@ const Home = () => {
       className='base-layout__home'
     >
       {!user && <Login />}
-      {user && !loggedUser && <Register />}
+      {user && !loggedUser?.name && <Register />}
       {user && loggedUser && <Redirect to='/profile' />}
     </BaseLayout>
   );
