@@ -1,0 +1,130 @@
+[data-theme='dark'] {
+  body {
+    background: $theme-dark-bg-900;
+  }
+  .header {
+    background: $theme-dark-bg-800;
+  }
+  .toggle {
+    box-shadow: -8px -4px 8px 0px $theme-dark-bg-800,
+      8px 4px 12px 0px $theme-dark-bg-900,
+      4px 4px 15px 0px $theme-dark-bg-500 inset,
+      -4px -4px 15px 0px $theme-dark-bg-500 inset;
+  }
+  .indicator {
+    background: $theme-dark-bg-300;
+    box-shadow: -8px -4px 8px 0px $theme-dark-bg-400,
+      8px 4px 12px 0px $theme-dark-bg-500;
+  }
+  .icon {
+    color: $theme-dark-bg-500;
+    background: $theme-dark-bg-200;
+  }
+  .section {
+    &__title {
+      color: $theme-dark-bg-100;
+    }
+  }
+  .nav {
+    &__logo,
+    &__link {
+      color: $theme-dark-bg-100;
+      &:hover {
+        color: $color-primary-dark;
+      }
+      &.active {
+        color: $color-primary-dark;
+        &::before {
+          background-color: $color-primary-dark;
+        }
+      }
+    }
+    &__menu {
+      background-color: $theme-dark-bg-800;
+    }
+  }
+  .page {
+    &__wrapper {
+      background: $theme-dark-bg-500;
+    }
+  }
+  .form {
+    &__wrapper {
+      background: $theme-dark-bg-500;
+    }
+    &__title {
+      color: $theme-dark-bg-100;
+    }
+  }
+
+  .input {
+    color: $theme-dark-bg-100;
+    &__wrapper {
+      border-bottom: 2px solid $theme-dark-bg-100;
+    }
+    &--focus::after {
+      color: $theme-dark-bg-100;
+    }
+  }
+
+  .profile {
+    &__email {
+      color: $theme-dark-bg-100;
+    }
+    &__thumbnail {
+      background: $theme-dark-bg-300;
+    }
+  }
+
+  .icon {
+    &__title {
+      color: $theme-dark-bg-100;
+    }
+  }
+  .people__avatar {
+    color: $theme-dark-bg-600;
+    background-color: $theme-dark-bg-200;
+  }
+  .people__info,
+  .search__icon {
+    color: $theme-dark-bg-100;
+  }
+
+  .parties {
+    &__icon {
+      color: $theme-dark-bg-100;
+    }
+    &__profile {
+      background: $theme-dark-bg-200;
+    }
+    &__name {
+      color: $theme-dark-bg-700;
+    }
+    &__value {
+      color: #1a99b6;
+    }
+    &__picture {
+      box-shadow: 0 0 0 10px $theme-dark-bg-200, 0 0 0 22px $theme-dark-bg-100;
+    }
+  }
+  .group {
+    &__date {
+      color: $theme-dark-bg-100;
+    }
+  }
+  .posts {
+    &__card {
+      background: $theme-dark-bg-300;
+      border: 1px solid $theme-dark-bg-200;
+    }
+    &__content {
+      color: $theme-dark-bg-100;
+      background: $theme-dark-bg-700;
+    }
+    &__title,
+    &__time,
+    &__header .post__icon {
+      color: $theme-dark-bg-800;
+    }
+  }
+}

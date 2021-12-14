@@ -1,4 +1,5 @@
 @import './variables';
+@import './dark-theme';
 @import './components/_shared';
 @import './components/_base-layout';
 @import './components/_profile';
@@ -25,6 +26,7 @@ body {
   font-size: $font-size-s;
   margin: $spacing-xl 0 0 0;
   background-color: $color-body;
+  transition: all 0.3s ease-in-out;
 }
 
 ul {

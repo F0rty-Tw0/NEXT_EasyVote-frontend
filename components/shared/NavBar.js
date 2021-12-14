@@ -9,6 +9,8 @@ import {
   BiUser,
 } from 'react-icons/bi';
 
+import ThemeChanger from '../ThemeChanger';
+
 const NavBar = () => {
   const router = useRouter();
 
@@ -21,6 +23,8 @@ const NavBar = () => {
       <Link passHref href={`/`}>
         <a className='nav__logo'>EasyVote</a>
       </Link>
+      <ThemeChanger />
+
       <div className='nav__menu' id='nav-menu'>
         <ul className='nav__list'>
           <li className='nav__item'>
