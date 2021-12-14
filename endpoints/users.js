@@ -1,5 +1,5 @@
 import useSWR from 'swr';
-import { fetchWithUserToken } from 'services/fetchApi';
+import { fetchWithUserToken, postWithSavedUserToken } from 'services/fetchApi';
 
 const useGetLoggedUser = () => {
   const { data, error, ...rest } = useSWR('users/user', fetchWithUserToken);
@@ -9,4 +9,8 @@ const useGetLoggedUser = () => {
 const getLoggedUser = () => {
   return fetchWithUserToken('users/user');
 };
-export { getLoggedUser, useGetLoggedUser };
+
+const createUser = (user) => {
+  return postWithSavedUserToken(user, 'users');
+};
+export { getLoggedUser, useGetLoggedUser, createUser };

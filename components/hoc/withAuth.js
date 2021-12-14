@@ -14,7 +14,7 @@ const WithAuth = ({ children, role }) => {
         </BaseLayout>
       );
 
-    if (!loggedUser) return <Redirect to='/' />;
+    if (loggedUser?.name === null) return <Redirect to='/' />;
     if (role && loggedUser.role.name !== role) return <Redirect to='/' />;
     return { ...children };
   }

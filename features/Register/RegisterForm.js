@@ -1,15 +1,28 @@
 import { useState } from 'react';
-import FormNavigation from './FormNavigation';
+import { useRouter } from 'next/router';
+import { useDispatch } from 'react-redux';
 import { useForm } from 'react-hook-form';
+import { setLoggedUser } from 'redux/actions';
+import { getLoggedUser } from 'endpoints/users';
+import FormNavigation from './FormNavigation';
+import { createUser } from 'endpoints/users';
 
 const RegisterForm = () => {
+  const router = useRouter();
+  const dispatch = useDispatch();
   const [step, setStep] = useState(0);
 
   const completeStep = () => {
     setStep((current) => current + 1);
   };
 
-  const onSubmit = (data) => console.log(data);
+  const onSubmit = async (user) => {
+    console.log(user);
+    await createUser(user);
+    const fetchedUser = await getLoggedUser();
+    dispatch(setLoggedUser(fetchedUser));
+    router.push('/profile');
+  };
 
   const submit = async (event) => {
     event.preventDefault();
@@ -38,16 +51,16 @@ const RegisterForm = () => {
           </div>
           <div className='input__wrapper'>
             <input
-              {...register('birthday', {
+              {...register('birthDate', {
                 required: true,
               })}
               className={`input ${
-                watch('birthday') ? 'input--filled' : 'input--empty'
+                watch('birthDate') ? 'input--filled' : 'input--empty'
               }`}
               placeholder='none'
               type='date'
             />
-            {errors['birthday'] && (
+            {errors['birthDate'] && (
               <span className='input__error'>mandatory</span>
             )}
             <span className='input--focus' placeholder='Birth Day'></span>
@@ -80,11 +93,13 @@ const RegisterForm = () => {
         <section>
           <div className='input__wrapper'>
             <input
-              {...register('phone')}
-              className={`input ${watch('phone') ? 'input--filled' : ''}`}
+              {...register('phoneNumber')}
+              className={`input ${watch('phoneNumber') ? 'input--filled' : ''}`}
               type='telephone'
             />
-            {errors['phone'] && <span className='input__error'>mandatory</span>}
+            {errors['phoneNumber'] && (
+              <span className='input__error'>mandatory</span>
+            )}
             <span className='input--focus' placeholder='Phone'></span>
           </div>
           <div className='input__wrapper'>
@@ -100,13 +115,11 @@ const RegisterForm = () => {
           </div>
           <div className='input__wrapper'>
             <input
-              {...register('zipCode', { required: true })}
-              className={`input ${watch('zipCode') ? 'input--filled' : ''}`}
+              {...register('zip', { required: true })}
+              className={`input ${watch('zip') ? 'input--filled' : ''}`}
               type='text'
             />
-            {errors['zipCode'] && (
-              <span className='input__error'>mandatory</span>
-            )}
+            {errors['zip'] && <span className='input__error'>mandatory</span>}
             <span className='input--focus' placeholder='Zip Code'></span>
           </div>
         </section>
