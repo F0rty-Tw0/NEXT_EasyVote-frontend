@@ -58,15 +58,17 @@
     color: $color-text;
   }
   &__email {
+    margin: 0 $spacing-xxl $font-size-s $spacing-xxl;
     font-size: $font-size-s;
     letter-spacing: 1.5px;
     color: $color-text;
-    margin-bottom: $spacing-s;
+    @media screen and (min-width: $screen-s) {
+      margin: 0 $spacing-xxxl $font-size-s $spacing-xxxl;
+    }
   }
   &__icons {
     display: flex;
     justify-content: space-between;
-    align-items: center;
     text-align: center;
     margin-top: $spacing-s;
     margin-bottom: $spacing-s;
@@ -107,6 +109,8 @@
     color: $color-text;
   }
   &__container {
+    margin-right: $spacing-xs;
+    margin-left: $spacing-xs;
     display: flex;
     align-items: center;
     flex-direction: column;
